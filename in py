@@ -1,0 +1,21 @@
+import logging
+
+from honeypy import HoneyPy
+
+# Membuat instance dari HoneyPy
+honeypy = HoneyPy()
+
+# Mengaktifkan logging untuk mengumpulkan informasi tentang serangan
+logging.basicConfig(level=logging.INFO)
+
+# Memulai HoneyPy
+honeypy.start()
+
+
+Setelah program dijalankan, HoneyPy akan mulai mengumpulkan informasi tentang serangan yang sedang berlangsung. Informasi yang dikumpulkan oleh HoneyPy meliputi tanggal dan waktu serangan, alamat IP yang menyerang, protokol yang digunakan, dan port yang digunakan. Berikut adalah contoh hasil yang dapat ditampilkan oleh HoneyPy:
+
+INFO:honeypy:2022-01-01T00:00:00+00:00 [TCP] 192.168.1.1:12345 -> 192.168.1.2:8080
+INFO:honeypy:2022-01-01T00:00:00+00:00 [UDP] 192.168.1.1:12345 -> 192.168.1.2:8080
+INFO:honeypy:2022-01-01T00:00:00+00:00 [ICMP] 192.168.1.1 -> 192.168.1.2
+
+Di atas adalah contoh sederhana program honeypot yang dapat digunakan untuk mengumpulkan informasi tentang serangan yang sedang berlangsung. Namun, perlu diingat bahwa program honeypot yang lebih kompleks dan lengkap biasanya membutuhkan konfigurasi yang lebih detail dan pemeliharaan yang lebih intensif
